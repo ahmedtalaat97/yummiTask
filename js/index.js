@@ -468,7 +468,7 @@ function contactPage(){
                 <input  id="passwordInput" onkeyup="inputValidation()" type="password" class="form-control " placeholder="Enter Your Password">
                 <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none animate__animated animate__headShake">
                     Enter valid password *It must not contain any whitespace.
-                    It must contain at least one uppercase, one lowercase and one numeric character one special character[~!@#$%^&*()--+={}[]|\:;"'<>,.?/_₹] Length must be between 10 to 16 characters.*
+                    It must contain at least one uppercase, one lowercase and one numeric character one special character[~!@#$%^&*()--+={}[]|\:;"'<>,.?/_₹] Length must be between 8 to 16 characters.*
                 </div>
             </div>
             <div class="col-md-6">
@@ -508,7 +508,7 @@ function ageValidation(){
     return(reg.test(document.getElementById("ageInput").value))
 }
 function passwordValidation(){
-    let reg=/^(\S)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{10,16}$/
+    let reg=/^(?=.*[-\#\$\.\%\&\@\!\+\=\<\>\*\_])(?=.*[a-zA-Z])(?=.*\d).{8,16}$/
     return(reg.test(document.getElementById('passwordInput').value))
 
 }
