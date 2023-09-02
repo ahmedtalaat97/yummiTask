@@ -22,7 +22,7 @@ body{
   }
 
 .sideNav{
-    left: -250px;
+    left: -300px;
     z-index: 99;
 }
   .navTab{
